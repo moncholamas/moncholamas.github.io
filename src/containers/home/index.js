@@ -8,29 +8,30 @@ const PersonalContainer = () => {
           <Grid
             container
             spacing={2}
-            direction="row-reverse"
+            direction="row"
             justifyContent="center"
             alignItems="center"
           >
             <Grid item xs={12} lg={6}>
+              <Programador />
               <Typography variant="h1" sx={{
                 fontSize: "2em"
               }}>Manuel Lamas <Typography component="span">{' [ Full Stack Developer ]'}</Typography></Typography>
-              <Typography>
+              
+            </Grid>
+            <Grid item xs={12} lg={6}>
+            <Typography>
                 {`
                 { 
                   \n
-                  Edad: 31 años, \r
-                  Domicilio: San Miguel de Tucumán, \n
-                  Profesión: Programador,
-                  Mate: Amargo
-                  Hijos: Un perro
+                  Edad: 31, \r
+                  Domicilio: "San Miguel de Tucumán", \n
+                  Profesión: "Programador",
+                  Mate: "Amargo"
+                  Hijos: "Un can-hijo"
                 }
                 `}
               </Typography>
-            </Grid>
-            <Grid item xs={12} lg={6}>
-              <Programador />
             </Grid>
           </Grid>
         </Container>

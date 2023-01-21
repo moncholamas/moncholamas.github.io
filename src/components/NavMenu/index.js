@@ -12,6 +12,8 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import MessageIcon from '@mui/icons-material/Message';
+import { Link, animateScroll as scroll } from "react-scroll";
+
 
 const pages = ['BackEnd', 'FrontEnd', 'DevOps', 'Más'];
 const settings = ['WhatsApp', 'Correo'];
@@ -87,9 +89,15 @@ function NavMenu() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+                <Link
+                  to={page}
+                  smooth={true}
+                >
+                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page}</Typography>
+                  </MenuItem>
+                </Link>
+
               ))}
             </Menu>
           </Box>
@@ -113,13 +121,19 @@ function NavMenu() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+              <Link
+                to={page}
+                smooth={true}
+                offset={-100}
               >
-                {page}
-              </Button>
+                <Button
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                >
+                  {page}
+                </Button>
+              </Link>
             ))}
           </Box>
 
@@ -131,7 +145,7 @@ function NavMenu() {
                   component="a"
                   href="#"
                   sx={{
-                    display:{xs:"none", md:"flex"},
+                    display: { xs: "none", md: "flex" },
                     mr: 2,
                     flexGrow: 1,
                     fontFamily: 'monospace',
@@ -140,10 +154,10 @@ function NavMenu() {
                     textDecoration: 'none',
                   }}
                 >
-                  
+
                   Contacto
                 </Typography>
-                <MessageIcon sx={{ display: { md: 'flex', color:"white" }, mr: 1 }} />
+                <MessageIcon sx={{ display: { md: 'flex', color: "white" }, mr: 1 }} />
               </IconButton>
             </Tooltip>
             <Menu

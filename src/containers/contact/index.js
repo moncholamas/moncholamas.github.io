@@ -4,7 +4,7 @@ import Programador from '../../components/Programador';
 
 const ContactContainer = () => {
     return (
-        <Container maxWidth={"lg"} sx={{minHeight:"400px"}}>
+        <Container maxWidth={"lg"} sx={{minHeight:"400px"}} name="Contacto">
           <Grid
             container
             spacing={2}
