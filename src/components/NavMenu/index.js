@@ -91,6 +91,7 @@ function NavMenu() {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: 'block', md: 'none' },
+                mt: '10px' 
               }}
             >
               {pages.map((page) => (
@@ -98,7 +99,7 @@ function NavMenu() {
                   to={page}
                   smooth={true}
                 >
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <MenuItem key={page} onClick={handleCloseNavMenu} sx={{minWidth:"200px", textAlign:"center", ml:2}}>
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
                 </Link>
