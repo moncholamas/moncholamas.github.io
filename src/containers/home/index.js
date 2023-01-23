@@ -5,8 +5,8 @@ import Section from '../../components/Section';
 
 const PersonalContainer = () => {
     return (
-      <Section>
-        <Container maxWidth={"lg"} sx={{minHeight:"400px"}} color="common.white">
+      <Section >
+        <Container maxWidth={"lg"} sx={{marginTop:"5em"}} color="common.white">
           <Grid
             container
             spacing={2}

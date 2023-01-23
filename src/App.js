@@ -20,8 +20,8 @@ function App() {
           <BackEndContainer />
           <FrontEndContainer />
           <DevOpsContainer />
-          <ContactContainer />
           <MoreContainer />
+          <ContactContainer />
     </div>
   );
 }

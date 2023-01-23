@@ -13,10 +13,15 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import MessageIcon from '@mui/icons-material/Message';
 import { Link, animateScroll as scroll } from "react-scroll";
-
+import { ListItemIcon, ListItemText } from '@mui/material';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 const pages = ['BackEnd', 'FrontEnd', 'DevOps', 'Más'];
-const settings = ['WhatsApp', 'Correo'];
+const settings = [
+  {icon: <WhatsAppIcon fontSize="small" /> , title:'WhatsApp'},
+  {icon: <MailOutlineIcon fontSize="small" /> , title:'Correo'}
+];
 
 function NavMenu() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -140,23 +145,6 @@ function NavMenu() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Contacto">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }} >
-                <Typography
-                  noWrap
-                  component="a"
-                  href="#"
-                  sx={{
-                    display: { xs: "none", md: "flex" },
-                    mr: 2,
-                    flexGrow: 1,
-                    fontFamily: 'monospace',
-                    fontWeight: 700,
-                    color: 'white',
-                    textDecoration: 'none',
-                  }}
-                >
-
-                  Contacto
-                </Typography>
                 <MessageIcon sx={{ display: { md: 'flex', color: "white" }, mr: 1 }} />
               </IconButton>
             </Tooltip>
@@ -176,9 +164,12 @@ function NavMenu() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+              {settings.map((op) => (
+                <MenuItem key={op.title} onClick={handleCloseUserMenu}>
+                  <ListItemIcon>
+                    {op.icon}
+                  </ListItemIcon>
+                  <ListItemText>{op.title}</ListItemText>
                 </MenuItem>
               ))}
             </Menu>
