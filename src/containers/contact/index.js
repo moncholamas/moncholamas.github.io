@@ -12,7 +12,7 @@ const ContactContainer = () => {
             justifyContent="center"
             alignItems="center"
           >
-            <Grid item xs={12} lg={6}>
+            <Grid item xs={12} lg={12} textAlign="center">
               <Typography variant="h3">Contacto</Typography>
               <Typography component="span">Full Stack Developer</Typography>
             </Grid>

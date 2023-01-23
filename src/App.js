@@ -16,14 +16,12 @@ function App() {
   return (
     <div className="App">
       <NavMenu / >
-      <Container maxWidth={false} sx={{marginTop:"100px"}}>
           <PersonalContainer />
           <BackEndContainer />
           <FrontEndContainer />
           <DevOpsContainer />
           <ContactContainer />
           <MoreContainer />
-      </Container>
     </div>
   );
 }

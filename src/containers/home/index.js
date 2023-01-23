@@ -1,9 +1,11 @@
-import { Container, Divider, Grid, Typography } from '@mui/material'
+import { Button, Container, Divider, Grid, Typography } from '@mui/material'
 import Programador from '../../components/Programador';
+import Section from '../../components/Section';
 
 
 const PersonalContainer = () => {
     return (
+      <Section>
         <Container maxWidth={"lg"} sx={{minHeight:"400px"}} color="common.white">
           <Grid
             container
@@ -16,8 +18,10 @@ const PersonalContainer = () => {
               <Programador />
               <Typography variant="h1" sx={{
                 fontSize: "2em"
-              }}>Manuel Lamas <Typography component="span">{' [ Full Stack Developer ]'}</Typography></Typography>
-              
+              }}>Manuel Lamas <Typography component="span" color="primary">{' [ Full Stack Developer ]'}</Typography></Typography>
+              <Typography variant="body1" >
+                ¡Gracias por tomarte un tiempo para conocerme!
+              </Typography>
             </Grid>
             <Grid item xs={12} lg={6}>
             <Typography>
@@ -32,9 +36,13 @@ const PersonalContainer = () => {
                 }
                 `}
               </Typography>
+              <Button variant="outlined">
+                Ver Perfil Técnico                
+              </Button>
             </Grid>
           </Grid>
         </Container>
+      </Section>
     )
 }
 
