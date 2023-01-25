@@ -12,8 +12,9 @@ const PersonalContainer = () => {
     Profesión: `"Programador"`,
   }
   const exp = {
-    "Dev Full Stack": `"Gestión y Servicios SRL"`,
-    "Ayudante de Cátedra": `"Universidad Nacional de Tucumán"`,
+    "Back End Dev": `"Sitenso"`,
+    "Full Stack Dev": `"GyS SRL"`,
+    "Ayudante de Cátedra": `"UNT - FaCET"`,
   }
   return (
     <Section >
@@ -41,9 +42,16 @@ const PersonalContainer = () => {
                 }}>Manuel Lamas
                 </Typography>
               </Grid>
-              <Grid lg={12} xs={6} textAlign="center">
-                <Typography component="span" color="primary">{' [ Full Stack Developer ]'}</Typography>
+              <Grid lg={6} xs={8} textAlign="center">
+                <Divider sx={{
+                  "&::before, &::after": {
+                    borderColor: "primary.main",
+                  },
+                }}>
+                  <Typography component="span" color="primary"> Full Stack Developer</Typography>
+                </Divider>
               </Grid>
+
             </Grid>
           </Grid>
           <Grid item xs={12} lg={6}>
