@@ -4,7 +4,8 @@ import { Box, padding } from "@mui/system";
 const ResumeJson = ({ cvRows, exp }) => {
     const keys = Object.keys(cvRows);
     const keysExp = Object.keys(exp)
-    return (<>
+    return (
+        <Box sx={{mt:"1em"}}>
         <RowFormat> {`Resume: {`} </RowFormat>
         <Box sx={{ ml: "40px" }}>
             {
@@ -23,13 +24,13 @@ const ResumeJson = ({ cvRows, exp }) => {
             <RowFormat> {`}`} </RowFormat>
         </Box>
         <RowFormat> {`}`} </RowFormat>
-    </>)
+    </Box>)
 }
 
 
 const RowFormat = ({ children }) => {
     return (
-        <Typography sx={{ fontSize: "1.2em", padding:"4px" }}> {children} </Typography>
+        <Typography sx={{ fontSize: "1em", padding:"0.3em" }}> {children} </Typography>
     )
 }
 

@@ -98,6 +98,7 @@ function NavMenu() {
                 <Link
                   to={page}
                   smooth={true}
+                  offset={-80}
                 >
                   <MenuItem key={page} onClick={handleCloseNavMenu} sx={{minWidth:"200px", textAlign:"center", ml:2}}>
                     <Typography textAlign="center">{page}</Typography>
@@ -130,7 +131,7 @@ function NavMenu() {
               <Link
                 to={page}
                 smooth={true}
-                offset={-100}
+                offset={-120}
               >
                 <Button
                   key={page}

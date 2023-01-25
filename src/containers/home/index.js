@@ -2,20 +2,22 @@ import { Button, Container, Divider, Grid, Typography } from '@mui/material'
 import Programador from '../../components/Programador';
 import ResumeJson from '../../components/ResumeJson';
 import Section from '../../components/Section';
+import { Link, animateScroll as scroll } from "react-scroll";
+
 
 const PersonalContainer = () => {
   const cvRows = {
-    Edad: 31,
-    Domicilio: "S. M. de Tucumán",
-    Profesión: "Programador",
+    Edad: `"31 años"`,
+    Domicilio: `"S. M. de Tucumán"`,
+    Profesión: `"Programador"`,
   }
   const exp = {
-    "Dev Full Stack": "Gestión y Servicios SRL",
-    "Ayudante de Cátedra": "Universidad Nacional de Tucumán",
+    "Dev Full Stack": `"Gestión y Servicios SRL"`,
+    "Ayudante de Cátedra": `"Universidad Nacional de Tucumán"`,
   }
   return (
     <Section >
-      <Container maxWidth={"lg"} sx={{ marginTop: "3em" }} color="common.white">
+      <Container maxWidth={"lg"} sx={{ marginTop: "2.5em" }} color="common.white">
         <Grid
           container
           spacing={2}
@@ -24,7 +26,7 @@ const PersonalContainer = () => {
           alignItems="center"
         >
           <Grid item xs={12} lg={6}>
-            <Grid 
+            <Grid
               container
               direction="row"
               justifyContent="center"
@@ -59,8 +61,14 @@ const PersonalContainer = () => {
         alignItems="center"
         sx={{ marginTop: "1em" }}
       >
-        <Button variant="outlined" sx={{ marginBottom: "-2em" }}>
-          Ver Perfil Técnico
+        <Link to="BackEnd" smooth offset={-100}>
+          <Button variant="outlined" sx={{ marginBottom: "-2em" }}>
+            Navegar
+          </Button>
+        </Link>
+
+        <Button variant="text" sx={{ marginBottom: "-2em", ml: "14px" }} disabled={true}>
+          Descargar CV
         </Button>
       </Grid>
     </Section>
