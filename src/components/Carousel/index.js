@@ -17,7 +17,7 @@ const CarouselContainer = ({ items }) => {
 
 const Item = ({ item }) => {
     return (
-        <Box sx={{ minHeight: "500px", padding: "2em" }}>
+        <Box sx={{ minHeight: "420px", padding: "2em" }}>
             <h2>{item.name}</h2>
             <p>{item.description}</p>
 
