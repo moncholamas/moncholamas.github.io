@@ -1,14 +1,14 @@
-import { Button, ButtonGroup, Checkbox, Container, Divider, FormControlLabel, Grid, IconButton, TextField, Tooltip, Typography } from '@mui/material'
+import { Box, Button, ButtonGroup, Checkbox, Container, Divider, FormControlLabel, Grid, IconButton, TextField, Tooltip, Typography } from '@mui/material'
 import Programador from '../../components/Programador';
 import Section from '../../components/Section';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import { Box } from '@mui/system';
+import PhoneIcon from '@mui/icons-material/Phone';
 
 const ContactContainer = () => {
   return (
-    <Section variant="primary">
+    <Section bgColor={"#333"}>
       <Container maxWidth={"lg"} name="Contacto">
         <Grid
           container
@@ -21,7 +21,7 @@ const ContactContainer = () => {
             <Typography variant="h4" color="inherit">Contacto</Typography>
           </Grid>
           <Grid item xs={12} lg={6} textAlign="center">
-            <ButtonGroup aria-label="text button group" size="large" variant="outlined">
+            <ButtonGroup aria-label="text button group" size="large" variant="outlined" sx={{margin:"2em 0"}}>
               <Tooltip title="LinkedIn">
                 <IconButton color="inherit" aria-label="LinkedIn" component="label">
                   <LinkedInIcon fontSize='large' />
@@ -37,6 +37,11 @@ const ContactContainer = () => {
                   <WhatsAppIcon fontSize='large' />
                 </IconButton>
               </Tooltip>
+              <Tooltip title="Llamar">
+                <IconButton color="inherit" aria-label="upload picture" component="label">
+                  <PhoneIcon fontSize='large' />
+                </IconButton>
+              </Tooltip>
             </ButtonGroup>
           </Grid>
           <Grid item xs={12} lg={6} textAlign="center">
@@ -49,9 +54,7 @@ const ContactContainer = () => {
                 type={"email"}
                 sx={{ input: {color:"white" }}}
                 inputProps={{ style: { color: "white" } }}
-                InputLabelProps={{
-                  style: { color: '#DDD'}, 
-               }}
+
               />
               <TextField
                 id="outlined-multiline-flexible"
@@ -62,12 +65,11 @@ const ContactContainer = () => {
                 variant="filled"
                 fullWidth
                 inputProps={{ style: { color: "white" } }}
-                InputLabelProps={{
-                  style: { color: '#DDD'}, 
-               }}
+
               />
-              <FormControlLabel control={<Checkbox defaultChecked color='success' sx={{borderColor:"#EEE"}} />} label="Autorizo a recibir la respuesta a mi correo electrónico." color="inherit" />
-              <Button color="inherit" variant="outlined" sx={{ mt: "2em" }}>
+              <FormControlLabel control={<Checkbox color='primary' sx={{borderColor:"#EEE"}} />} label="Autorizo el contacto a este correo." color="inherit" />
+              <br />
+              <Button color="primary" disableElevation variant="contained" sx={{ mt: "2em" }} disabled>
                 Enviar Mensaje
               </Button>
               <Button color="inherit" sx={{ mt: "2em" }}>

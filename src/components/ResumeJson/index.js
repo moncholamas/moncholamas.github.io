@@ -17,7 +17,7 @@ const ResumeJson = ({ cvRows, exp }) => {
             <Box sx={{ ml: "30px" }}>
                 {
                     keysExp.map((prop, i) => {
-                        const commentario = i === 0? <Typography variant="span" sx={{color:"#CCC"}}> // Emplo Actual</Typography> : null
+                        const commentario = i === 0? <Typography variant="span" sx={{color:"#CCC"}}> // Empleo Actual</Typography> : null
                         return (<RowFormat key={prop}> {prop} <Typography variant="span" color="primary"> {`:`} </Typography>  <Typography variant="span" sx={{color:"#333"}}> {exp[prop]}</Typography><Typography variant="span" color="primary">{`,`} </Typography> {commentario} </RowFormat>
                         )
                     })

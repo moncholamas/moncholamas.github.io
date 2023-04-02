@@ -5,7 +5,7 @@ import Section from '../../components/Section';
 
 const MoreContainer = () => {
   return (
-    <Section bgColor={"#333"}>
+    <Section  variant="primary">
       <Container maxWidth={"lg"}>
         <Grid
           container
