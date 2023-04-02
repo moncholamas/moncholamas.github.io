@@ -16,8 +16,10 @@ const ResumeJson = ({ cvRows, exp }) => {
             <RowFormat>Experiencia Laboral Relacionada <Typography variant="span" color="primary"> {`: {`} </Typography>   </RowFormat>
             <Box sx={{ ml: "30px" }}>
                 {
-                    keysExp.map((prop) => {
-                        return <RowFormat key={prop}> {prop} <Typography variant="span" color="primary"> {`:`} </Typography>  <Typography variant="span" sx={{color:"#333"}}> {exp[prop]}</Typography><Typography variant="span" color="primary">{`,`} </Typography> </RowFormat>
+                    keysExp.map((prop, i) => {
+                        const commentario = i === 0? <Typography variant="span" sx={{color:"#CCC"}}> // Empleo Actual</Typography> : null
+                        return (<RowFormat key={prop}> {prop} <Typography variant="span" color="primary"> {`:`} </Typography>  <Typography variant="span" sx={{color:"#333"}}> {exp[prop]}</Typography><Typography variant="span" color="primary">{`,`} </Typography> {commentario} </RowFormat>
+                        )
                     })
                 }
             </Box>
@@ -30,7 +32,7 @@ const ResumeJson = ({ cvRows, exp }) => {
 
 const RowFormat = ({ children, color }) => {
     return (
-        <Typography sx={{ fontSize: "1em", padding:"0.3em" }} color={color}> {children} </Typography>
+        <Typography sx={{ fontSize: "1em", padding:"0.3em 0" }} color={color}> {children} </Typography>
     )
 }
 
