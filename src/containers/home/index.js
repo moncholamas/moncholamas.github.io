@@ -8,7 +8,7 @@ import profile from "../../assets/images/profile.png"
 
 const PersonalContainer = () => {
   const cvRows = {
-    Nombre: "Manuel Lamas",
+    Nombre: `Manuel Lamas`,
     Edad: `31 años`,
     Domicilio: `S. M. de Tucumán`,
     Profesión: `Programador`,
