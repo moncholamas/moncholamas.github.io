@@ -22,6 +22,14 @@ const Item = ({ item }) => {
             <p>{item.description}</p>
 
             {
+                item.list && <ul>
+                    {item.list.map( item => (
+                        <li>{item}</li>
+                    ))}
+                </ul>
+            }
+
+            {
                 item.next && <Button className="CheckButton" variant='outlined'>
                     Continuar viendo {item.next}
                 </Button>

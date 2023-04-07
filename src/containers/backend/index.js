@@ -1,4 +1,5 @@
-import { Container, Divider, Grid, List, ListItem, ListItemText, Typography } from '@mui/material'
+import { ButtonGroup, Container, Divider, Grid, List, ListItem, ListItemText, Typography, Button } from '@mui/material'
+import { useState } from 'react';
 import CarouselContainer from '../../components/Carousel';
 import Programador from '../../components/Programador';
 import Section from '../../components/Section';
@@ -6,11 +7,13 @@ import SectionTitle from '../../components/SectionTitle';
 
 
 const BackEndContainer = () => {
+  const [selected, setSelected] = useState(0);
   const items = [
     {
-      name: "Nodejs",
+      name: "Javascript",
+      list: ["Api de archivos", "Middleware propios"],
       description: "Javascript es sin dudas el lenguaje de programación donde más lineas de código hice.",
-      parrafo1: "Donde construí desde APIs sencillas hasta sistemas de autogestión con respuestas automáticas con un bot! (mi actual proyecto)."
+      parrafo1: "Donde construí desde APIs combinando distintas tecnologías como ser Redis.",
     },
     {
       name: "DBS",
@@ -23,7 +26,7 @@ const BackEndContainer = () => {
     }
   ]
 
-  const lista = ["JavaScript", "SQL", "PHP / C#", "NoSQL"]
+  const submenu = ["JavaScript", "PHP", "C#"];
   return (
     <Section bgColor={"#333"}>
       <Container maxWidth={"lg"} name="BackEnd">
@@ -36,7 +39,6 @@ const BackEndContainer = () => {
         >
           <Grid item xs={12} lg={5}>
             <SectionTitle
-              lista={lista}
               seccion="BackEnd"
               divColor={"#616161"}
             />
@@ -48,9 +50,16 @@ const BackEndContainer = () => {
               SELECT * FROM dev_tools_back ORDER BY experiense DESC;
             </Typography> */}
           <Grid item xs={12} lg={7}>
-            <CarouselContainer
-              items={items}
-            />
+              {
+                submenu.map((sub, index) => {
+                  const color= index !== selected ? "inherit" : "primary";
+                  return (<Button  variant="outlined" size="small" onClick={ () => setSelected(index)} color={color}>
+                    {sub}
+                  </Button>)
+                }
+                )
+              }
+
           </Grid>
         </Grid>
       </Container>

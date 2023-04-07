@@ -5,17 +5,6 @@ const SectionTitle = ({seccion, divColor, lista}) => {
         <Typography variant="h3">{seccion}</Typography>
         <Divider sx={{ bgcolor: divColor }}>
         </Divider>
-        <List dense={true}>
-            {
-                lista.map(item => (
-                    <ListItem>
-                        <ListItemText
-                            primary={item}
-                        />
-                    </ListItem>
-                ))
-            }
-        </List>
     </>)
 }
 
