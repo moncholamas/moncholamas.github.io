@@ -20,7 +20,7 @@ const ContactContainer = () => {
           <Grid item xs={12} lg={12} textAlign="center">
             <Typography variant="h4" color="inherit">Contacto</Typography>
           </Grid>
-          <Grid item xs={12} lg={6} textAlign="center">
+          <Grid item xs={12} lg={12} textAlign="center">
             <ButtonGroup aria-label="text button group" size="large" variant="outlined" sx={{margin:"2em 0"}}>
               <Tooltip title="LinkedIn">
                 <IconButton color="inherit" aria-label="LinkedIn" component="label">
@@ -37,14 +37,9 @@ const ContactContainer = () => {
                   <WhatsAppIcon fontSize='large' />
                 </IconButton>
               </Tooltip>
-              <Tooltip title="Llamar">
-                <IconButton color="inherit" aria-label="upload picture" component="label">
-                  <PhoneIcon fontSize='large' />
-                </IconButton>
-              </Tooltip>
             </ButtonGroup>
           </Grid>
-          <Grid item xs={12} lg={6} textAlign="center">
+          {/* <Grid item xs={12} lg={6} textAlign="center">
             <Box component={"form"}>
               <TextField
                 id="outlined-multiline-flexible"
@@ -76,9 +71,9 @@ const ContactContainer = () => {
                 Borrar
               </Button>
             </Box>
-          </Grid>
-          <Grid item xs={12} lg={12} textAlign="center" sx={{ mt: "3em" }}>
-            <Typography variant="body2" color="inherit">Manuel Lamas - 2023</Typography>
+          </Grid> */}
+          <Grid item xs={12} lg={12} textAlign="center" >
+            <Typography variant="body2" color="inherit">Manuel Lamas - 2024 </Typography>
           </Grid>
         </Grid>
       </Container>

@@ -10,13 +10,15 @@ import DevOpsContainer from './containers/devops';
 import ContactContainer from './containers/contact';
 import MoreContainer from './containers/more';
 import NavMenu from './components/NavMenu';
+import PresentationContainer from './containers/presentation';
 
 
 function App() {
   return (
     <div className="App">
-      <NavMenu / >
+      <NavMenu />
           <PersonalContainer />
+          <PresentationContainer />
           <BackEndContainer />
           <FrontEndContainer />
           <DevOpsContainer />

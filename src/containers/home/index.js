@@ -9,22 +9,21 @@ import profile from "../../assets/images/profile.png"
 const PersonalContainer = () => {
   const cvRows = {
     Nombre: `Manuel Lamas`,
-    Edad: `31 años`,
-    Domicilio: `S. M. de Tucumán`,
-    Profesión: `Programador`,
+    Profesión: `Software Developer`,
   }
 
   const actual = {
-    "Back End Dev": `Sitenso`,
+    "Full Stack Dev": `GyS SRL`,
   }
 
   const exp = {
-    "Full Stack Dev": `GyS SRL`,
+    "Back End Dev": `SIU - Pilagá`,
+    "Full Stack Dev": `Sitenso`,
     "Ayudante de Cátedra": `UNT - FaCET`,
   }
   return (
     <Section >
-      <Container maxWidth={"lg"} sx={{ marginTop: "2.5em" }} color="common.white">
+      <Container maxWidth={"xl"} sx={{ marginTop: "2.5em" }} color="common.white">
         <Grid
           container
           spacing={2}
@@ -48,6 +47,7 @@ const PersonalContainer = () => {
                 }}>Software Developer
                 </Typography>
               </Grid>
+              <Grid  textAlign="center">
               <ButtonGroup size='small' variant="contained" aria-label="outlined primary button group">
                 <Button>
                   Curriculum Vitae
@@ -56,8 +56,6 @@ const PersonalContainer = () => {
                   Recomendaciones
                 </Button>
               </ButtonGroup>
-              <Grid lg={6} xs={8} textAlign="center">
-
               </Grid>
             </Grid>
           </Grid>
