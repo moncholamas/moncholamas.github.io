@@ -1,10 +1,8 @@
 import { Box, Button, ButtonGroup, Checkbox, Container, Divider, FormControlLabel, Grid, IconButton, TextField, Tooltip, Typography } from '@mui/material'
-import Programador from '../../components/Programador';
 import Section from '../../components/Section';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import PhoneIcon from '@mui/icons-material/Phone';
 
 const ContactContainer = () => {
   return (

@@ -53,7 +53,7 @@ const BackEndContainer = () => {
               {
                 submenu.map((sub, index) => {
                   const color= index !== selected ? "inherit" : "primary";
-                  return (<Button  variant="outlined" size="small" onClick={ () => setSelected(index)} color={color}>
+                  return (<Button key={index}  variant="outlined" size="small" onClick={ () => setSelected(index)} color={color}>
                     {sub}
                   </Button>)
                 }

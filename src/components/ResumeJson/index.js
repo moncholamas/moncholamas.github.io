@@ -11,7 +11,7 @@ const ResumeJson = ({ cvRows, actual, exp }) => {
             <Box sx={{ ml: "30px" }}>
                 {
                     keys.map((prop) => {
-                        return <RowFormat key={prop}> {prop} <Typography variant="span" color="primary"> {`:`} </Typography>  <Typography variant="span" sx={{ color: "#333" }}> {cvRows[prop]}</Typography><Typography variant="span" color="primary">{`,`} </Typography>  </RowFormat>
+                        return <RowFormat key={prop}> {prop} <Typography variant="span" color="primary"> {`:`} </Typography>  <Typography variant="span" sx={{ color: "#AAA" }}> {cvRows[prop]}</Typography><Typography variant="span" color="primary">{`,`} </Typography>  </RowFormat>
                     })
                 }
 
@@ -20,7 +20,7 @@ const ResumeJson = ({ cvRows, actual, exp }) => {
 
                     {
                         keysActual.map((prop, i) => {
-                            return (<RowFormat key={prop}> {prop} <Typography variant="span" color="primary"> {`:`} </Typography>  <Typography variant="span" sx={{ color: "#333" }}> {actual[prop]}</Typography><Typography variant="span" color="primary">{`,`} </Typography> </RowFormat>
+                            return (<RowFormat key={prop}> {prop} <Typography variant="span" color="primary"> {`:`} </Typography>  <Typography variant="span" sx={{ color: "#AAA" }}> {actual[prop]}</Typography><Typography variant="span" color="primary">{`,`} </Typography> </RowFormat>
                             )
                         })
                     }
@@ -32,7 +32,7 @@ const ResumeJson = ({ cvRows, actual, exp }) => {
 
                     {
                         keysExp.map((prop, i) => {
-                            return (<RowFormat key={prop}> {prop} <Typography variant="span" color="primary"> {`:`} </Typography>  <Typography variant="span" sx={{ color: "#333" }}> {exp[prop]}</Typography><Typography variant="span" color="primary">{`,`} </Typography> </RowFormat>
+                            return (<RowFormat key={prop}> {prop} <Typography variant="span" color="primary"> {`:`} </Typography>  <Typography variant="span" sx={{ color: "#AAA" }}> {exp[prop]}</Typography><Typography variant="span" color="primary">{`,`} </Typography> </RowFormat>
                             )
                         })
                     }

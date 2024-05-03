@@ -94,11 +94,12 @@ function NavMenu() {
                 mt: '10px' 
               }}
             >
-              {pages.map((page) => (
+              {pages.map((page,index) => (
                 <Link
                   to={page}
                   smooth={true}
                   offset={-80}
+                  key={index}
                 >
                   <MenuItem key={page} onClick={handleCloseNavMenu} sx={{minWidth:"200px", textAlign:"center", ml:2}}>
                     <Typography textAlign="center">{page}</Typography>
@@ -127,11 +128,12 @@ function NavMenu() {
             {`{ Manuel }`}
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {pages.map((page, index) => (
               <Link
                 to={page}
                 smooth={true}
                 offset={-120}
+                key={index}
               >
                 <Button
                   key={page}
