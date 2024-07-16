@@ -7,7 +7,7 @@ const ResumeJson = ({ cvRows, actual, exp }) => {
     const keysActual = Object.keys(actual);
     return (
         <Box sx={{ mt: "1em" }}>
-            <RowFormat > Resume <Typography variant="span" color="primary"> {`: {`} </Typography> </RowFormat>
+            <RowFormat > Overview <Typography variant="span" color="primary"> {`: {`} </Typography> </RowFormat>
             <Box sx={{ ml: "30px" }}>
                 {
                     keys.map((prop) => {
@@ -15,7 +15,7 @@ const ResumeJson = ({ cvRows, actual, exp }) => {
                     })
                 }
 
-                <RowFormat>Trabajo actual <Typography variant="span" color="primary"> {`: {`} </Typography>   </RowFormat>
+                <RowFormat>Current Job <Typography variant="span" color="primary"> {`: {`} </Typography>   </RowFormat>
                 <Box sx={{ ml: "30px" }}>
 
                     {
@@ -27,7 +27,7 @@ const ResumeJson = ({ cvRows, actual, exp }) => {
                 </Box>
                 <RowFormat color="primary"> {`},`} </RowFormat>
 
-                <RowFormat>Experiencia Laboral <Typography variant="span" color="primary"> {`: {`} </Typography>   </RowFormat>
+                <RowFormat>Previous Experiences<Typography variant="span" color="primary"> {`: {`} </Typography>   </RowFormat>
                 <Box sx={{ ml: "30px" }}>
 
                     {

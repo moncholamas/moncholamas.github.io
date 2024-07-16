@@ -11,18 +11,18 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const PersonalContainer = () => {
   const cvRows = {
-    Nombre: `Manuel Lamas`,
-    Profesión: `Software Developer`,
+    "Full Name": "Manuel Lamas",
+    "Profession": "Software Developer",
   }
 
   const actual = {
-    "Full Stack Dev": `GyS SRL`,
+    "Full Stack Dev": "GyS SRL",
   }
 
   const exp = {
-    "Back End Dev": `SIU - Pilagá`,
-    "Full Stack Dev": `Sitenso`,
-    "Ayudante de Cátedra": `UNT - FaCET`,
+    "Back End Dev": "SIU - Pilagá",
+    "Full Stack Dev": "Sitenso",
+    "Professor Assistant": "UNT - FaCET",
   }
   return (
     <Section bgColor={"#333"}>
