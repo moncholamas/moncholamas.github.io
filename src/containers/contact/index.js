@@ -6,7 +6,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const ContactContainer = () => {
   return (
-    <Section bgColor={"#333"}>
+    <Section bgColor={"#222"}>
       <Container maxWidth={"lg"} name="Contacto">
         <Grid
           container

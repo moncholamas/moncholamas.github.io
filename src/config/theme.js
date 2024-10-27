@@ -12,7 +12,8 @@ const theme = createTheme({
         }
     },
     typography: {
-        fontFamily: 'Kdam Thmor Pro',
+        fontFamily: 'Outfit',
+        fontSize: 13,
         allVariants:{
             color: grey[700]
         }

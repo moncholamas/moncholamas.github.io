@@ -3,7 +3,7 @@ import CarouselContainer from '../../components/Carousel';
 import Programador from '../../components/Programador';
 import Section from '../../components/Section';
 import SectionTitle from '../../components/SectionTitle';
-
+import BadgeIcon from '@mui/icons-material/Badge';
 
 const PresentationContainer = () => {
   const lista = ["CI/CD", "PM2", "Nginx Apache", "bash script"];
@@ -37,6 +37,7 @@ const PresentationContainer = () => {
             <SectionTitle
               lista={lista}
               seccion="Presentation"
+              icon={<BadgeIcon />}
             />
             </Grid>
             <Grid item xs={12} lg={7}>

@@ -4,7 +4,7 @@ import CarouselContainer from '../../components/Carousel';
 import Programador from '../../components/Programador';
 import Section from '../../components/Section';
 import SectionTitle from '../../components/SectionTitle';
-
+import CloudDoneIcon from '@mui/icons-material/CloudDone';
 
 const BackEndContainer = () => {
   const [selected, setSelected] = useState(0);
@@ -28,7 +28,7 @@ const BackEndContainer = () => {
 
   const submenu = ["JavaScript", "PHP", "C#"];
   return (
-    <Section bgColor={"#333"}>
+    <Section bgColor={"#222"}>
       <Container maxWidth={"lg"} name="BackEnd">
         <Grid
           container
@@ -41,6 +41,7 @@ const BackEndContainer = () => {
             <SectionTitle
               seccion="BackEnd"
               divColor={"#616161"}
+              icon={<CloudDoneIcon/>}
             />
           </Grid>
           {/* <Typography

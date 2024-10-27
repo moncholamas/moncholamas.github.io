@@ -25,8 +25,8 @@ const PersonalContainer = () => {
     "Professor Assistant": "UNT - FaCET",
   }
   return (
-    <Section bgColor={"#333"}>
-      <Container maxWidth={"xl"} sx={{ marginTop: "2.5em" }} color="common.white">
+    <Section bgColor={"#222"}>
+      <Container maxWidth={"xl"} sx={{ marginTop: "4em" }} color="common.white">
         <Grid
           container
           spacing={2}
@@ -48,7 +48,7 @@ const PersonalContainer = () => {
                 </Box>
               </Grid>
               <Grid item lg={12} xs={12} textAlign="center">
-                <Typography variant="h1" sx={{ fontSize: "1.5em", color: "#AAA" }}>
+                <Typography variant="h1" sx={{ fontSize: "2em", color: "#AAA", margin:'0.5em'}}>
                   Software Developer
                 </Typography>
               </Grid>
